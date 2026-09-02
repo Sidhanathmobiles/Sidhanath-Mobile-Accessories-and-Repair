@@ -1,55 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sidhanath Mobiles - Kashilingwadi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidhanath Mobiles</title>
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5;padding-bottom:80px}
-.head{background:#b30000;color:#fff;text-align:center;padding:14px;position:sticky;top:0;z-index:10}
-.cat{background:#fff;margin-top:12px;padding:12px;border-left:5px solid #b30000;font-weight:bold}
+body{margin:0;font-family:Arial;background:#f5f5f5;padding-bottom:70px}
+.head{background:#b30000;color:#fff;text-align:center;padding:15px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
-.card{background:#fff;border-radius:14px;padding:10px;text-align:center;box-shadow:0 2px 6px #0001}
-.card img{width:100%;height:90px;object-fit:contain;border-radius:8px}
-.price{color:#0a7a00;font-weight:bold;margin:5px 0;font-size:14px}
-.btn{padding:7px;border-radius:20px;display:block;text-decoration:none;font-size:13px;font-weight:bold;border:none;width:100%;cursor:pointer}
-.add{background:#ffcc00;color:#000}.buy{background:#25D366;color:#fff;margin-top:5px}
-.cart-bar{position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:10px 15px;display:flex;justify-content:space-between;align-items:center;z-index:20}
-.cart-box{position:fixed;bottom:60px;right:10px;left:10px;background:#fff;border-radius:15px;padding:15px;box-shadow:0 -5px 20px #0003;max-height:70vh;overflow:auto;display:none;z-index:20}
-.item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee}
+.card{background:#fff;border-radius:12px;padding:10px;text-align:center}
+.card img{width:100%;height:90px;object-fit:contain}
+.price{color:green;font-weight:bold;margin:5px}
+.btn{display:block;padding:8px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:5px;border:none;width:100%}
+.add{background:#ffcc00;color:#000}
+.buy{background:#25D366;color:#fff}
+.bar{position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px;display:flex;justify-content:space-between}
 </style>
 </head>
 <body>
-<div class="head"><h2 style="margin:0">SIDHANATH MOBILES</h2><p style="margin:3px;font-size:12px">Kashilingwadi, Near Water Tank, Mayakka Mandir, Jath-Sangli | 8698878105</p></div>
+<div class="head"><h2>SIDHANATH MOBILES</h2>Kashilingwadi, Near Water Tank, Jath-Sangli<br>8698878105</div>
 
-<div id="products"></div>
-
-<div class="cart-box" id="cartBox">
-<h3>🛒 Your Cart</h3><div id="cartItems"></div>
-<div style="font-weight:bold;margin-top:10px" id="total"></div>
-<a id="waLink" style="background:#25D366;color:#fff;padding:12px;border-radius:25px;display:block;text-align:center;text-decoration:none;margin-top:10px;font-weight:bold">WhatsApp Order Kara</a>
-<button onclick="clearCart()" style="margin-top:8px;width:100%;padding:8px;border-radius:20px;border:1px solid #ccc">Clear Cart</button>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=300"><b>Cover Case</b><div class="price">₹199-599</div><button class="btn add" onclick="addCart('Cover Case ₹199-599')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cover Case pahije">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=300"><b>Tempered Glass</b><div class="price">₹120-899</div><button class="btn add" onclick="addCart('Tempered Glass ₹120-899')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Glass pahije">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Lens Guard</b><div class="price">₹199-499</div><button class="btn add" onclick="addCart('Lens Guard ₹199-499')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Lens Guard">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300"><b>Charger 20W/45W/120W</b><div class="price">₹499-1699</div><button class="btn add" onclick="addCart('Charger ₹499-1699')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Charger">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Data Cable</b><div class="price">₹180-399</div><button class="btn add" onclick="addCart('Data Cable ₹180-399')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cable">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Power Bank</b><div class="price">₹1099-2999</div><button class="btn add" onclick="addCart('Power Bank ₹1099-2999')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Power Bank">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"><b>Earphone</b><div class="price">₹140-299</div><button class="btn add" onclick="addCart('Earphone ₹140-299')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earphone">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300"><b>Earbuds</b><div class="price">₹1199-4999</div><button class="btn add" onclick="addCart('Earbuds ₹1199-4999')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earbuds">Order</a></div>
 </div>
 
-<div class="cart-bar">
-<span>🛒 <span id="count">0</span> Items | ₹<span id="tot">0</span></span>
-<button onclick="toggleCart()" style="background:#ffcc00;border:none;padding:8px 15px;border-radius:20px;font-weight:bold">View Cart</button>
-</div>
+<div class="bar"><span id="c">0 Items</span><button onclick="order()" style="background:#ffcc00;border:none;padding:8px 15px;border-radius:20px;font-weight:bold">View Cart & Order</button></div>
 
 <script>
-const list=[
-{id:1,n:"Cover / Back Case",p:"₹199-599",pr:399,img:"https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=300"},
-{id:2,n:"Tempered Glass",p:"₹120-899",pr:199,img:"https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=300"},
-{id:3,n:"Camera Lens Guard",p:"₹199-499",pr:249,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:4,n:"Mobile Stand / Pouch",p:"₹199-599",pr:299,img:"https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"},
-{id:5,n:"Charger 20W/45W/120W",p:"₹499-1699",pr:799,img:"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300"},
-{id:6,n:"Data / Type C Cable",p:"₹180-399",pr:249,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:7,n:"Car Charger",p:"₹399-599",pr:399,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:8,n:"Power Bank",p:"₹1099-2999",pr:1499,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:9,n:"Wired Earphone",p:"₹140-299",pr:199,img:"https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"},
-{id:10,n:"Neckband / Earbuds",p:"₹1199-4999",pr:1499,img:"https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300"},
-{id:11,n:"Bluetooth Speaker",p:"₹2999-7999",pr:3499,img:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300"},
-{id:12,n:"AUX Cable",p:"₹169-299",pr:199,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:13,n:"Smart Watch / Band",p:"₹999-3999",pr:1499,img:"https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=300"},
-{id:14,n:"Watch Belt / Charger",p:"₹199-499",pr:249,img:"https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300"},
-{id:15,n:"Selfie Stick",p:"₹499-1999",pr:599,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"},
-{id:16,n:"Mobile Holder",p:"₹289-599",pr:349,img:"
+let cart=[];
+function addCart(n){cart.push(n);document.getElementById("c").innerText=cart.length+" Items | "+n+" Added";alert(n+" Cart madhe Add zala!")}
+function order(){if(cart.length==0){alert("Cart empty aahe, aadhi Add to Cart dab");return}let msg="Namaste Sidhanath Mobiles%0AMala he pahije:%0A"+cart.join("%0A");window.location.href="https://wa.me/918698878105?text="+msg}
+</script>
+</body>
+</html>
