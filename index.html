@@ -1,42 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="mr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sidhanath Mobiles</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidhanath Mobiles - Jath</title>
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5;padding-bottom:70px}
-.head{background:#b30000;color:#fff;text-align:center;padding:15px}
+body{margin:0;font-family:Arial;background:#f2f2f2;padding-bottom:75px}
+.head{background:linear-gradient(90deg,#900,#d00);color:#fff;text-align:center;padding:16px;position:sticky;top:0;z-index:10}
+.head h2{margin:0}
+.cat{background:#fff;margin:15px 10px 5px;padding:10px 12px;border-left:6px solid #b30000;font-weight:bold;font-size:16px;position:sticky;top:68px;z-index:5;box-shadow:0 2px 4px #0001}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
-.card{background:#fff;border-radius:12px;padding:10px;text-align:center}
-.card img{width:100%;height:90px;object-fit:contain}
-.price{color:green;font-weight:bold;margin:5px}
-.btn{display:block;padding:8px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:5px;border:none;width:100%}
-.add{background:#ffcc00;color:#000}
-.buy{background:#25D366;color:#fff}
-.bar{position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px;display:flex;justify-content:space-between}
+.card{background:#fff;border-radius:14px;padding:10px;text-align:center;box-shadow:0 2px 8px #0001;display:flex;flex-direction:column;justify-content:space-between}
+.card img{width:100%;height:80px;object-fit:contain;margin-bottom:5px}
+.card b{font-size:13px;min-height:32px;display:flex;align-items:center;justify-content:center}
+.price{color:#0a8a0a;font-weight:bold;font-size:13px;margin:6px 0}
+.price.blue{color:#0055d4}
+.btn{border:none;width:100%;padding:8px;border-radius:20px;font-weight:bold;font-size:12px;margin-top:4px;cursor:pointer}
+.add{background:#ffcc00;color:#000}.buy{background:#25D366;color:#fff;display:block;text-decoration:none;line-height:16px;padding:8px}
+.bar{position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;z-index:20}
 </style>
 </head>
 <body>
-<div class="head"><h2>SIDHANATH MOBILES</h2>Kashilingwadi, Near Water Tank, Jath-Sangli<br>8698878105</div>
+<div class="head"><h2>SIDHANATH MOBILES</h2><small>Kashilingwadi, Jath | 8698878105</small></div>
 
+<!-- 1 PROTECTION -->
+<div class="cat">1. Protection</div>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=300"><b>Cover Case</b><div class="price">₹199-599</div><button class="btn add" onclick="addCart('Cover Case ₹199-599')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cover Case pahije">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=300"><b>Tempered Glass</b><div class="price">₹120-899</div><button class="btn add" onclick="addCart('Tempered Glass ₹120-899')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Glass pahije">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Lens Guard</b><div class="price">₹199-499</div><button class="btn add" onclick="addCart('Lens Guard ₹199-499')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Lens Guard">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300"><b>Charger 20W/45W/120W</b><div class="price">₹499-1699</div><button class="btn add" onclick="addCart('Charger ₹499-1699')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Charger">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Data Cable</b><div class="price">₹180-399</div><button class="btn add" onclick="addCart('Data Cable ₹180-399')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cable">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300"><b>Power Bank</b><div class="price">₹1099-2999</div><button class="btn add" onclick="addCart('Power Bank ₹1099-2999')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Power Bank">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"><b>Earphone</b><div class="price">₹140-299</div><button class="btn add" onclick="addCart('Earphone ₹140-299')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earphone">Order</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300"><b>Earbuds</b><div class="price">₹1199-4999</div><button class="btn add" onclick="addCart('Earbuds ₹1199-4999')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earbuds">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=300"><b>Cover / Back Case</b><div class="price">₹199 - ₹599</div><button class="btn add" onclick="addCart('Cover')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cover pahije">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=300"><b>Screen Guard / Tempered Glass</b><div class="price">₹120 - ₹899</div><button class="btn add" onclick="addCart('Tempered Glass')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Tempered Glass pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/10542/10542434.png"><b>Camera Lens Guard</b><div class="price">₹199 - ₹499</div><button class="btn add" onclick="addCart('Lens Guard')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Lens Guard pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3771/3771055.png"><b>Mobile Stand / Pouch</b><div class="price">₹199 - ₹599</div><button class="btn add" onclick="addCart('Mobile Stand')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Mobile Stand pahije">Order</a></div>
 </div>
 
-<div class="bar"><span id="c">0 Items</span><button onclick="order()" style="background:#ffcc00;border:none;padding:8px 15px;border-radius:20px;font-weight:bold">View Cart & Order</button></div>
+<!-- 2 CHARGING -->
+<div class="cat">2. Charging</div>
+<div class="grid">
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png"><b>Charger (20W,45W,120W)</b><div class="price">₹499 - ₹1699</div><button class="btn add" onclick="addCart('Fast Charger')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Charger pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3976/3976913.png"><b>Data Cable / Type-C Cable</b><div class="price">₹180 - ₹399</div><button class="btn add" onclick="addCart('Data Cable')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Data Cable pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/6955/6955437.png"><b>Car Charger</b><div class="price">₹399 - ₹599</div><button class="btn add" onclick="addCart('Car Charger')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Car Charger pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3103/3103451.png"><b>Power Bank</b><div class="price">₹1099 - ₹2999</div><button class="btn add" onclick="addCart('Power Bank')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Power Bank pahije">Order</a></div>
+</div>
+
+<!-- 3 AUDIO -->
+<div class="cat">3. Audio</div>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300"><b>Wired Earphone</b><div class="price">₹140 - ₹299</div><button class="btn add" onclick="addCart('Wired Earphone')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earphone pahije">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300"><b>Bluetooth Neckband / Earbuds</b><div class="price">₹1199 - ₹4999</div><button class="btn add" onclick="addCart('Neckband / Earbuds')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Earbuds pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/138/138817.png"><b>Bluetooth Speaker</b><div class="price">₹2999 - ₹7999</div><button class="btn add" onclick="addCart('Speaker')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Speaker pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/456/456180.png"><b>AUX Cable</b><div class="price">₹169 - ₹299</div><button class="btn add" onclick="addCart('AUX Cable')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=AUX Cable pahije">Order</a></div>
+</div>
+
+<!-- 4 SMART GADGETS -->
+<div class="cat">4. Smart Gadgets</div>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"><b>Smart Watch / Band</b><div class="price">₹999 - ₹3999</div><button class="btn add" onclick="addCart('Smart Watch')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Smart Watch pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"><b>Smart Watch Belt / Charger</b><div class="price">₹199 - ₹499</div><button class="btn add" onclick="addCart('Watch Belt')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Watch Belt pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png"><b>Selfie Stick</b><div class="price">₹499 - ₹1999</div><button class="btn add" onclick="addCart('Selfie Stick')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Selfie Stick pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/890/890132.png"><b>Mobile Holder (Bike / Car)</b><div class="price">₹289 - ₹599</div><button class="btn add" onclick="addCart('Mobile Holder')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Mobile Holder pahije">Order</a></div>
+</div>
+
+<!-- 5 REPAIR & PHONES -->
+<div class="cat">5. Repair, Phones & Other</div>
+<div class="grid">
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087815.png"><b>Battery, Display, Speaker</b><div class="price blue">✅ Available</div><button class="btn add" onclick="addCart('Repair Service')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Repair sathi">Repair</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/2987/2987918.png"><b>Memory Card / OTG</b><div class="price">₹399 - ₹1799</div><button class="btn add" onclick="addCart('Memory Card')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Memory Card pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524331.png"><b>Sim Pin, Cleaning Kit</b><div class="price blue">✅ Available</div><button class="btn add" onclick="addCart('Cleaning Kit')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Cleaning Kit pahije">Order</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/644/644458.png"><b>Kepad Phone</b><div class="price blue">✅ Available</div><button class="btn add" onclick="addCart('Kepad Phone')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Kepad Phone pahije">Price Vichara</a></div>
+<div class="card"><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg"><b>iPhone Mobile</b><div class="price">₹49,999 - ₹2,29,999</div><button class="btn add" onclick="addCart('iPhone')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=iPhone cha rate?">Price Vichara</a></div>
+<div class="card"><img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-ultra-1.jpg"><b>Smart/Android Phones</b><div class="price">₹7,999 - ₹1,99,999</div><button class="btn add" onclick="addCart('Android Phone')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Android Phone cha rate?">Price Vichara</a></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png"><b>iPhone All Spare Parts</b><div class="price">₹1099 - ₹5999</div><button class="btn add" onclick="addCart('iPhone Spare')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=iPhone Spare pahije">Order</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"><b>Smart Watch All</b><div class="price">₹999 - ₹3999</div><button class="btn add" onclick="addCart('Smart Watch')">Add to Cart</button><a class="btn buy" href="https://wa.me/918698878105?text=Smart Watch pahije">Order</a></div>
+</div>
+
+<div style="height:20px"></div>
+<div class="bar"><span id="c">🛒 0 Items</span><button onclick="order()" style="background:#ffcc00;border:none;padding:10px 18px;border-radius:25px;font-weight:bold">View Cart & Order</button></div>
 
 <script>
 let cart=[];
-function addCart(n){cart.push(n);document.getElementById("c").innerText=cart.length+" Items | "+n+" Added";alert(n+" Cart madhe Add zala!")}
-function order(){if(cart.length==0){alert("Cart empty aahe, aadhi Add to Cart dab");return}let msg="Namaste Sidhanath Mobiles%0AMala he pahije:%0A"+cart.join("%0A");window.location.href="https://wa.me/918698878105?text="+msg}
+function addCart(n){
+  cart.push(n);
+  document.getElementById("c").innerText="🛒 "+cart.length+" Items | "+cart.join(", ");
+  // vibration
+  if(navigator.vibrate) navigator.vibrate(50);
+  alert(n+" Cart madhe Add zala! ✅\nTotal: "+cart.length+" items");
+}
+function order(){
+  if(cart.length==0){alert("Cart empty aahe boss!");return}
+  let list=""; let counts={};
+  cart.forEach(i=>{counts[i]=(counts[i]||0)+1});
+  for(let k in counts){ list+= (counts[k]>1? counts[k]+" x " : "")+k+"%0A"; }
+  let msg="Namaste Sidhanath Mobiles%0A%0AMala he pahije:%0A"+list+"%0ATotal Items: "+cart.length;
+  window.location.href="https://wa.me/918698878105?text="+msg;
+}
 </script>
 </body>
-</html>
+  </html>
